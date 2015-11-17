@@ -3,9 +3,9 @@ from cartridge.shop import checkout
 from cartridge.shop.models import Order
 from project import settings
 
-def my_payment_handler(request, order_form, order):
+def stripe_payment_handler(request, order_form, order):
     """
-    My payment handler - called when the final step of the
+    This payment handler is called when the final step of the
     checkout process with payment information is submitted. Implement
     your own and specify the path to import it from via the setting
     ``SHOP_HANDLER_PAYMENT``. This function will typically contain

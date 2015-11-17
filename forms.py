@@ -30,7 +30,7 @@ class NamelessSelect(WidgetNonameMixin,forms.widgets.Select):
 
 
 
-class MyOrderForm(OrderForm):
+class StripeOrderForm(OrderForm):
     """
     Derived order form that implements nameless cc and stripeToken inputs.
 
@@ -65,7 +65,7 @@ class MyOrderForm(OrderForm):
         The default preprocessor that is called from super handles
         copying billing fields to shipping fields if "same" checked. StripeToken defaults to None.
         """
-        data = super(MyOrderForm,cls).preprocess(data)
+        data = super(StripeOrderForm,cls).preprocess(data)
 
         if ("stripeToken" in data) and (len(data["stripeToken"]) == 0):
             data["stripeToken"] = "None"

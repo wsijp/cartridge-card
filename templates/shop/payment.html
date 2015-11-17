@@ -1,5 +1,5 @@
 {% overextends "shop/payment.html" %}
-{% load i18n mezzanine_tags  staticfiles my_tags %}
+{% load i18n mezzanine_tags  staticfiles stripe_tags %}
 
 {% block extra_js %}
 {{ block.super }}
@@ -9,5 +9,5 @@
 
 {% block extra_head %}
 {{ block.super }}
-<script type="text/javascript">Stripe.setPublishableKey('{% my_stripe_key %}');</script>
+<script type="text/javascript">Stripe.setPublishableKey('{% stripe_key %}');</script>
 {% endblock %}
