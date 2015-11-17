@@ -9,7 +9,7 @@ def read(fname):
 #with open('README.rst') as file:
 # long_description = file.read()
 
-setup(name='cartridge-cart',
+setup(name='cartridge-card',
       version='1.0',
       author='Willem Sijp',
       author_email='wim.sijp@gmail.com',
