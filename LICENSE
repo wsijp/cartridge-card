@@ -10,9 +10,9 @@ cartridge-cart license
 Copyright (c) 2015, Willem Sijp
 All rights reserved.
 
-The Javascript in buy.js is based on code by Larry Ullman, Copyright (C) 2013, Larry Ullman (www.larryullman.com)
+The Javascript in buy.js is based on code by Larry Ullman, Copyright (C) 2013, Larry Ullman (www.larryullman.com), see the License file in static/js/
 
-cartridge-cart 
+cartridge-card
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
