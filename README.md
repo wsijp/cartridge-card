@@ -19,6 +19,6 @@ Completion of the Cartridge checkout buying pages triggers the sending of e-mail
 * EMAIL_HOST = "localhost"
 * EMAIL_PORT = 1025
 
-Also, running a simple debugging e-mail server from the command line helps avoid errors: 
+Also, running a simple debugging e-mail server from the command line helps avoid errors during development: 
 
 python -m smtpd -n -c DebuggingServer localhost:1025
