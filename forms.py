@@ -67,6 +67,7 @@ class StripeOrderForm(OrderForm):
         """
         data = super(StripeOrderForm,cls).preprocess(data)
 
+        # The stripeToken form field is required, hence fill it with something.
         if ("stripeToken" in data) and (len(data["stripeToken"]) == 0):
             data["stripeToken"] = "None"
 

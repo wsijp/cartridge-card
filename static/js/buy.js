@@ -1,7 +1,6 @@
-// Created by Larry Ullman, www.larryullman.com, @LarryUllman
-// Posted as part of the series "Processing Payments with Stripe"
+// Based on code created by Larry Ullman (April 14, 2015), www.larryullman.com, @LarryUllman
+// that is posted as part of the series "Processing Payments with Stripe"
 // http://www.larryullman.com/series/processing-payments-with-stripe/
-// Last updated April 14, 2015
 
 // This page is intended to be stored in a public "js" directory.
 
@@ -19,9 +18,10 @@ function reportError(msg) {
 // Watch for the document to be ready:
 $(document).ready(function() {
 
-        $(".checkout-form").prepend("<div id='payment-errors'></div>");
+        // payment errors div is added from javascript:
+        $(".checkout-form").prepend("<span id='payment-errors'></div>");
 
-	// Watch for a form submission:
+	// Watch for a form submission via the "Next" button:
 	$("input[value=Next]").click(function(event) {
 
 		// Flag variable:
