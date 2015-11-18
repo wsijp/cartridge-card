@@ -62,7 +62,13 @@ $(document).ready(function() {
 				number: ccNum,
 				cvc: cvcNum,
 				exp_month: expMonth,
-				exp_year: expYear
+				exp_year: expYear,
+				name: $("input[name=card_name]").val(),
+				address_line1: $("input[name=billing_detail_street]").val(),
+				address_city: $("input[name=billing_detail_city]").val(),
+				address_state: $("input[name=billing_detail_state]").val(),
+				address_zip: $("input[name=billing_detail_postcode]").val(),
+				address_country: $("input[name=billing_detail_country]").val()
 			}, stripeResponseHandler);
 
 		}
