@@ -1,7 +1,7 @@
 import stripe
 from cartridge.shop import checkout
 from cartridge.shop.models import Order
-from project import settings
+from mezzanine.conf import settings
 
 def stripe_payment_handler(request, order_form, order):
     """
@@ -15,7 +15,6 @@ def stripe_payment_handler(request, order_form, order):
     """
 
     stripe.api_key = settings.STRIPE_SECRET
-
     request.session["order"]["stripeToken"] = "transacted" # not sure if this persists
 
     token = order_form["stripeToken"].value() # obtain the Stripe token
@@ -87,8 +86,6 @@ def stripe_payment_handler(request, order_form, order):
 
     if error_msg is not None:
         raise checkout.CheckoutError(error_msg)
-
-    print charge
 
     return charge["id"]
 

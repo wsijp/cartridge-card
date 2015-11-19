@@ -1,6 +1,6 @@
 import datetime
 from django import template
-from project import settings
+from mezzanine.conf import settings
 
 register = template.Library()
 
